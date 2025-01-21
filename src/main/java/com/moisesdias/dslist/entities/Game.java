@@ -13,42 +13,44 @@ public class Game {
     private String title;
     @Column(name = "game_year")
     private Integer year;
-    private String gender;
+    private String genre;
     private String platforms;
     private Double score;
     private String imgUrl;
-    private String shortDescriptions;
-    private String longDescriptions;
+    @Column(columnDefinition = "TEXT")
+    private String shortDescription;
+    @Column(columnDefinition = "TEXT")
+    private String longDescription;
 
     public Game() {
     }
 
-    public Game(Long id, String title, String longDescriptions, String platforms, Integer year, String gender, Double score, String imgUrl, String shortDescriptions) {
+    public Game(Long id, String title, String longDescription, String platforms, Integer year, String gender, Double score, String imgUrl, String shortDescription) {
         this.id = id;
         this.title = title;
-        this.longDescriptions = longDescriptions;
+        this.longDescription = longDescription;
         this.platforms = platforms;
         this.year = year;
-        this.gender = gender;
+        this.genre = gender;
         this.score = score;
         this.imgUrl = imgUrl;
-        this.shortDescriptions = shortDescriptions;
+        this.shortDescription = shortDescription;
     }
 
-    public String getLongDescriptions() {
-        return longDescriptions;
+    public String getLongDescription() {
+        return longDescription;
     }
 
-    public void setLongDescriptions(String longDescriptions) {
-        this.longDescriptions = longDescriptions;
+    public void setLongDescription(String longDescription) {
+        this.longDescription = longDescription;
     }
 
-    public String getShortDescriptions() {
-        return shortDescriptions;
+    public String getShortDescription() {
+        return shortDescription;
     }
 
-    public void setShortDescriptions(String shortDescriptions) {
-        this.shortDescriptions = shortDescriptions;
+    public void setShortDescription(String shortDescription) {
+        this.shortDescription = shortDescription;
     }
 
     public String getImgUrl() {
@@ -75,12 +77,12 @@ public class Game {
         this.platforms = platforms;
     }
 
-    public String getGender() {
-        return gender;
+    public String getGenre() {
+        return genre;
     }
 
-    public void setGender(String gender) {
-        this.gender = gender;
+    public void setGenre(String genre) {
+        this.genre = genre;
     }
 
     public Integer getYear() {
