@@ -1,7 +1,6 @@
 package com.moisesdias.dslist.dto;
 
 import com.moisesdias.dslist.entities.Game;
-import jakarta.persistence.Column;
 
 public class GameMinDTO {
 
