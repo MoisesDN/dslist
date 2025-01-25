@@ -66,6 +66,10 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+				<configuration>
+					<mainClass>com.moisesdias.dslist.DslistApplication</mainClass>
+					<outputFile>moisesdias-springboot</outputFile>
+				</configuration>
 			</plugin>
 		</plugins>
 	</build>
